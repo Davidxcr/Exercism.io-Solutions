@@ -1,13 +1,16 @@
-raindrops = int(input("Please enter an integer: "))
+def convert(number):
 
-if raindrops % 3 == 0:
-    print("Pling")
+    raindrops = ""
 
-if raindrops % 5 == 0:
-    print("Plang")
+    if number % 3 == 0:
+        raindrops += "Pling"
 
-if raindrops % 7 == 0:
-    print("Plong")
+    if number % 5 == 0:
+        raindrops += "Plang"
 
-if raindrops % 3 != 0 and 5 != 0 and 7 != 0:
-    print(raindrops)
+    if number % 7 == 0:
+        raindrops += "Plong"
+
+    if not raindrops:
+        raindrops = str(number)
+    return raindrops
